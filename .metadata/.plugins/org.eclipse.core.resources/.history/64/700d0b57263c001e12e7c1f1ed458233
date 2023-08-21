@@ -1,0 +1,78 @@
+package com.example.entities;
+
+import java.util.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Order")
+public class Order {
+	private int orderDtID;
+	private String othershippingadd;
+	private Date order_date;
+	private Date delivery_date;
+	private int customerID;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "OrderID")
+	public int getOrderDtID() {
+		return orderDtID;
+	}
+
+	public void setOrderDtID(int orderDtID) {
+		this.orderDtID = orderDtID;
+	}
+
+	public String getOthershippingadd() {
+		return othershippingadd;
+	}
+
+	public void setOthershippingadd(String othershippingadd) {
+		this.othershippingadd = othershippingadd;
+	}
+
+	public Date getOrder_date() {
+		return order_date;
+	}
+
+	public void setOrder_date(Date order_date) {
+		this.order_date = order_date;
+	}
+
+	public Date getDelivery_date() {
+		return delivery_date;
+	}
+
+	public void setDelivery_date(Date delivery_date) {
+		this.delivery_date = delivery_date;
+	}
+@Column(name="Cust_Id")
+	public int getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(int customerID) {
+		this.customerID = customerID;
+	}
+
+	public Order(int orderDtID, String othershippingadd, Date order_date, Date delivery_date, int customerID) {
+		super();
+		this.orderDtID = orderDtID;
+		this.othershippingadd = othershippingadd;
+		this.order_date = order_date;
+		this.delivery_date = delivery_date;
+		this.customerID = customerID;
+	}
+
+	public Order() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.example.entities;
+
+import java.util.Set;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Customer")
+public class Customer {
+	private int cust_Id;
+	private String cust_Name;
+	private long phone_No;
+	private String email;
+	private char gender;
+	private int redeem_points;
+	private String addline1;
+	private String addline2;
+	private String city;
+	private long pincode;
+	
+	
+	
+		
+}

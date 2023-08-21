@@ -1,0 +1,15 @@
+package com.example.services;
+
+import java.util.Optional;
+
+import com.example.entities.Product_Details;
+
+public class ProductDtlManagerImpl implements ProductDtlManager {
+
+	@Override
+	public Optional<Product_Details> getProductDetails(int id) {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+}

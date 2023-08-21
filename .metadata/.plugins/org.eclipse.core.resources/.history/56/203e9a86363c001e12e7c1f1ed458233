@@ -1,0 +1,78 @@
+package com.example.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Invoice")
+public class Invoice {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="InvId")
+    private int invId; 
+    	
+	@Column(name="TotalAmt")
+    private double totalAmt;
+	
+	@Column(name="Tax")
+    private double tax;
+	
+	@Column(name="PayableAmt")
+    private double payableAmt;
+
+    public Invoice() {
+        super();
+    }
+
+    public Invoice(double totalAmt, double tax, double payableAmt) {
+        this.totalAmt = totalAmt;
+        this.tax = tax;
+        this.payableAmt = payableAmt;
+    }
+
+    public int getInvId() {
+        return invId;
+    }
+
+    public void setInvId(int invId) {
+        this.invId = invId;
+    }
+
+    public double getTotalAmt() {
+        return totalAmt;
+    }
+
+    public void setTotalAmt(double totalAmt) {
+        this.totalAmt = totalAmt;
+    }
+
+    public double getTax() {
+        return tax;
+    }
+
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    public double getPayableAmt() {
+        return payableAmt;
+    }
+
+    public void setPayableAmt(double payableAmt) {
+        this.payableAmt = payableAmt;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "invId=" + invId +
+                ", totalAmt=" + totalAmt +
+                ", tax=" + tax +
+                ", payableAmt=" + payableAmt +
+                '}';
+    }
+}
