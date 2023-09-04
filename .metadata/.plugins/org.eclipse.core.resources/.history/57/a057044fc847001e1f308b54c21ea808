@@ -1,0 +1,123 @@
+package com.example.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="Cart")
+public class Cart {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@Column(name = "Cart_Id")
+	private int cart_Id;
+	
+//	//@Column(name = "Quantity")
+//	private int quantity;
+//	
+//	//@Column(name = "Price")
+//	private double price;
+//	
+//	//@Column(name = "Delivery_Charges")
+//	private double deliveryCharges;
+//	
+//	//Column(name = "Discount")
+//	private double discount;
+//	
+//	//@Column(name = "Total")
+//	private double total;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "cust_Id",referencedColumnName = "cust_Id")
+	public Customer customer;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "prod_Id",referencedColumnName = "prod_Id")
+	private Product product;
+
+	public Cart() {
+		super();
+	}
+
+
+	public Cart(int cart_Id, int quantity, double price, double deliveryCharges,
+			double discount, double total) {
+		super();
+		this.cart_Id = cart_Id;
+//		this.quantity = quantity;
+//		this.price = price;
+//		this.deliveryCharges = deliveryCharges;
+//		this.discount = discount;
+//		this.total = total;
+	}
+
+	
+	public int getCart_Id() {
+		return cart_Id;
+	}
+
+	public void setCart_Id(int cart_Id) {
+		this.cart_Id = cart_Id;
+	}
+
+	
+//	public int getQuantity() {
+//		return quantity;
+//	}
+//
+//	public void setQuantity(int quantity) {
+//		this.quantity = quantity;
+//	}
+//
+//	
+//	public double getPrice() {
+//		return price;
+//	}
+//
+//	public void setPrice(double price) {
+//		this.price = price;
+//	}
+//
+//	
+//	public double getDeliveryCharges() {
+//		return deliveryCharges;
+//	}
+//
+//	public void setDeliveryCharges(double deliveryCharges) {
+//		this.deliveryCharges = deliveryCharges;
+//	}
+//
+//	
+//	public double getDiscount() {
+//		return discount;
+//	}
+//
+//	public void setDiscount(double discount) {
+//		this.discount = discount;
+//	}
+//
+//	
+//	public double getTotal() {
+//		return total;
+//	}
+//
+//	public void setTotal(double total) {
+//		this.total = total;
+//	}
+//	
+	
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+		
+}

@@ -27,4 +27,15 @@ public class CartServiceImpl implements CartService{
 		cart_repository.findById(cid);
 	}
 
+	@Override
+	public List<Cart> getCartByCustomer(int custid) {
+		// TODO Auto-generated method stub
+		return cart_repository.getCartByCustomer(custid);
+	}
+
+	@Override
+	public void deleteCartById(int cartid) {
+		cart_repository.deleteById(cartid);
+	}
+
 }

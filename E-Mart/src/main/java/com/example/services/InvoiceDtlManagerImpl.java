@@ -17,4 +17,10 @@ public class InvoiceDtlManagerImpl implements InvoiceDtlManager {
 		return repository.findById(id);
 	}
 
+	@Override
+	public void addInvoiceDtl(Invoice_Details invdtl) {
+		repository.save(invdtl);
+		
+	}
+
 }

@@ -1,0 +1,17 @@
+package com.example.services;
+import java.util.List;
+import java.util.Optional;
+
+import com.example.entities.Invoice;
+
+public interface InvoiceManager 
+{
+	List<Invoice> getInvoices();
+	
+	List<Invoice> getInvoice(int custid);
+	
+	void addInvoice(Invoice invoice);
+	
+	Optional<Invoice> getInvoice();
+	
+}

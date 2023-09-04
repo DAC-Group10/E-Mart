@@ -24,7 +24,12 @@ public class AuthenticationManagerImpl implements AuthenticationManager {
 		
 	}
 
-	
+	@Override
+	public Optional<Authentication> getbyusername(String uname) {
+		// TODO Auto-generated method stub
+		return auth_repo.getbyusername(uname);
+	}
+
 
 	
 

@@ -1,7 +1,0 @@
-package com.example.services;
-
-import com.example.entities.Invoice;
-
-public interface InvoiceDtlManager {
-	Invoice getInvoiceDtl(int id);
-}

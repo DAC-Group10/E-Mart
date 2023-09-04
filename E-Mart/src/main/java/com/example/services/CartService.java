@@ -7,4 +7,6 @@ public interface CartService {
 	List<Cart> getCart();
 	void addCart(Cart cart);
 	void addByProject(Cart cart, int cid);
+	List<Cart> getCartByCustomer(int custid);
+	void deleteCartById(int cartid);
 }

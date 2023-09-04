@@ -3,13 +3,16 @@ package com.example.controllers;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.entities.Invoice_Details;
 import com.example.services.InvoiceDtlManager;
 
-@RestController 
+@RestController
+@CrossOrigin
 public class InvoiceDtlController {
 	
 	@Autowired
@@ -20,5 +23,10 @@ public class InvoiceDtlController {
 	 {
 		Optional<Invoice_Details> i = manager.getInvoiceDtl(id);
 		return i; 
+	 }
+	 
+	 @PostMapping(value = "api/addInvoicedtl")
+	 public void addInvoiceDtl(Invoice_Details invdtl) {
+		 manager.addInvoiceDtl(invdtl);
 	 }
 }

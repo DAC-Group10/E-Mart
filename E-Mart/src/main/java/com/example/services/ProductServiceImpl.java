@@ -21,12 +21,19 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public List<Product> getAllProductsByName(String desc) {
-		return p_repository.findByProdShortDesc(desc);
+		return p_repository.findByProdName(desc);
 	}
 
 	@Override
-	public Optional<Product> getAllProductsById(int pId) {
+	public Optional<Product> getProductsById(int pId) {
 		return p_repository.findById(pId);
+	}
+
+	@Override
+	public List<Product> getProductByCat(String cat) {
+		// TODO Auto-generated method stub
+		return p_repository.findProductBySubcategory(cat);
+
 	}
 	
 

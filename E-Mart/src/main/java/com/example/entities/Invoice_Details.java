@@ -15,49 +15,49 @@ import jakarta.persistence.Table;
 public class Invoice_Details {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "invoice_dtl_id")
+	//@Column(name = "invoice_dtl_id")
 	private int invdtl_Id;
 
-	@Column(name="mrp")
+	//@Column(name="mrp")
 	private double mrp;
 	
-	@Column(name = "card_holder_price")
-	private double card_holder_price;
+	//@Column(name = "card_holder_price")
+	private double cardHolderPrice;
 
-	@Column(name = "points reedemed")
-	private int points_reedemed;
+	//@Column(name = "points reedemed")
+	private int pointsReedemed;
 	
-	@Column(name = "DeliveryCharges")
+	//@Column(name = "DeliveryCharges")
 	private double delivery_charges;
 	
-	@Column(name = "ProdQty")
-	private int prod_qty;
+	//Column(name = "ProdQty")
+	private int prodQty;
 	
-	@Column(name = "Total")
+	//@Column(name = "Total")
 	private double total;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "inv_Id",referencedColumnName = "inv_Id")
+	@JoinColumn(name = "invoice_Id",referencedColumnName = "invoice_Id")
 	private Invoice invoice;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "prod_id",referencedColumnName = "prod_id")
+	@JoinColumn(name = "prod_Id",referencedColumnName = "prod_Id")
 	private Product product;
 
 	public Invoice_Details() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Invoice_Details(int invdtl_Id, double mrp, double card_holder_price, int points_reedemed,
-			double delivery_charges, int prod_qty, double total, Invoice invoice, Product product) {
+
+	public Invoice_Details(int invdtl_Id, double mrp, double cardHolderPrice, int pointsReedemed,
+			double delivery_charges, int prodQty, double total, Invoice invoice, Product product) {
 		super();
 		this.invdtl_Id = invdtl_Id;
 		this.mrp = mrp;
-		this.card_holder_price = card_holder_price;
-		this.points_reedemed = points_reedemed;
+		this.cardHolderPrice = cardHolderPrice;
+		this.pointsReedemed = pointsReedemed;
 		this.delivery_charges = delivery_charges;
-		this.prod_qty = prod_qty;
+		this.prodQty = prodQty;
 		this.total = total;
 		this.invoice = invoice;
 		this.product = product;
@@ -75,32 +75,24 @@ public class Invoice_Details {
 		return mrp;
 	}
 
-	public int getProd_qty() {
-		return prod_qty;
-	}
-
-	public void setProd_qty(int prod_qty) {
-		this.prod_qty = prod_qty;
-	}
-
 	public void setMrp(double mrp) {
 		this.mrp = mrp;
 	}
 
-	public double getCard_holder_price() {
-		return card_holder_price;
+	public double getCardHolderPrice() {
+		return cardHolderPrice;
 	}
 
-	public void setCard_holder_price(double card_holder_price) {
-		this.card_holder_price = card_holder_price;
+	public void setCardHolderPrice(double cardHolderPrice) {
+		this.cardHolderPrice = cardHolderPrice;
 	}
 
-	public int getPoints_reedemed() {
-		return points_reedemed;
+	public int getPointsReedemed() {
+		return pointsReedemed;
 	}
 
-	public void setPoints_reedemed(int points_reedemed) {
-		this.points_reedemed = points_reedemed;
+	public void setPointsReedemed(int pointsReedemed) {
+		this.pointsReedemed = pointsReedemed;
 	}
 
 	public double getDelivery_charges() {
@@ -109,6 +101,14 @@ public class Invoice_Details {
 
 	public void setDelivery_charges(double delivery_charges) {
 		this.delivery_charges = delivery_charges;
+	}
+
+	public int getProdQty() {
+		return prodQty;
+	}
+
+	public void setProdQty(int prodQty) {
+		this.prodQty = prodQty;
 	}
 
 	public double getTotal() {
@@ -135,7 +135,5 @@ public class Invoice_Details {
 		this.product = product;
 	}
 	
-	
-
 }
 

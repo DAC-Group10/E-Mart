@@ -6,5 +6,6 @@ import com.example.entities.Category;
 
 public interface CategoryManager {
 	List<Category> getCategories();
-	Optional<Category> getcategory(int id);
+	Optional<Category> getCategory(int id);
+	List<Category> getCategory(String subcatid);
 }

@@ -7,4 +7,6 @@ public interface AuthenticationManager {
 	
 	void addAuthentication(Authentication auth);
 	Optional<Authentication> getAuthentication(int Auth_id);
+	Optional<Authentication> getbyusername(String uname);
+
 }

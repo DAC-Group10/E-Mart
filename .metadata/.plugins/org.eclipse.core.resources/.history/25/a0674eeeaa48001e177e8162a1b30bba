@@ -1,0 +1,87 @@
+package com.example.entities;
+
+import java.sql.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Invoice")
+public class Invoice {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@Column(name="inv_Id")
+    private int invoice_Id;
+	
+	//@Column(name="InvDt")
+    private Date invDate;
+	
+	//@Column(name="TotalAmt")
+    private double totalAmt;
+	
+	//@Column(name="Tax")
+    private double tax;
+	
+	//@Column(name="PayableAmt")
+    private double payableAmt;
+
+    public Invoice() {
+        super();
+    }
+
+	public Invoice(int invoice_Id, String invDate, double totalAmt, double tax, double payableAmt) {
+		super();
+		this.invoice_Id = invoice_Id;
+		this.invDate = invDate;
+		this.totalAmt = totalAmt;
+		this.tax = tax;
+		this.payableAmt = payableAmt;
+	}
+
+	public int getInvoice_Id() {
+		return invoice_Id;
+	}
+
+	public void setInvoice_Id(int invoice_Id) {
+		this.invoice_Id = invoice_Id;
+	}
+
+	public String getInvDate() {
+		return invDate;
+	}
+
+	public void setInvDate(String invDate) {
+		this.invDate = invDate;
+	}
+
+	public double getTotalAmt() {
+		return totalAmt;
+	}
+
+	public void setTotalAmt(double totalAmt) {
+		this.totalAmt = totalAmt;
+	}
+
+	public double getTax() {
+		return tax;
+	}
+
+	public void setTax(double tax) {
+		this.tax = tax;
+	}
+
+	public double getPayableAmt() {
+		return payableAmt;
+	}
+
+	public void setPayableAmt(double payableAmt) {
+		this.payableAmt = payableAmt;
+	}
+
+	
+    
+}

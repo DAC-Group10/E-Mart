@@ -1,0 +1,41 @@
+package com.example.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.entities.Invoice;
+import com.example.repositories.InvoiceRepository;
+
+@Service
+public class InvoiceManagerImpl implements InvoiceManager 
+{
+	@Autowired
+	private InvoiceRepository i_repo;
+	
+	@Override
+	public List<Invoice> getInvoices() {
+		return i_repo.findAll();
+	}
+
+	@Override
+	public void addInvoice(Invoice invoice) {
+		
+		i_repo.save(invoice);
+		
+	}
+
+	@Override
+	public List<Invoice> getInvoice(int custid) {
+		
+		return i_repo.getInvoiceBycustId(custid);
+	}
+
+	@Override
+	public Optional<Invoice> getInvoice() {
+		
+		return i_repo.getInvoiceById();
+	}
+
+}

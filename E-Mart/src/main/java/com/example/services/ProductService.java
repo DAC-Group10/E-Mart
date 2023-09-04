@@ -8,5 +8,6 @@ import com.example.entities.Product;
 public interface ProductService {
 	List<Product> getAllProducts();
 	List<Product> getAllProductsByName(String pName);
-	Optional<Product> getAllProductsById (int pId);
+	List<Product> getProductByCat(String cat);
+	Optional<Product> getProductsById (int pId);
 }

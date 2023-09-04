@@ -7,17 +7,17 @@ import jakarta.persistence.*;
 public class Authentication {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="auth_id")
-	private int auth_id;
+	//@Column(name="auth_id")
+	private int auth_Id;
 			
-	@Column(name="uname")
+	//@Column(name="uname")
 	private String uname;
 
-	@Column(name="pass")
+	//@Column(name="pass")
 	private String pass;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Cust_Id",referencedColumnName = "cust_Id")
+	@JoinColumn(name = "cust_Id",referencedColumnName = "cust_Id")
 	public Customer customer;
 
 	public Authentication() {
@@ -25,19 +25,19 @@ public class Authentication {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Authentication(int auth_id, String uname, String pass) {
+	public Authentication(int auth_Id, String uname, String pass) {
 		super();
-		this.auth_id = auth_id;
+		this.auth_Id = auth_Id;
 		this.uname = uname;
 		this.pass = pass;
 	}
 
 	public int getAuth_id() {
-		return auth_id;
+		return auth_Id;
 	}
 
 	public void setAuth_id(int auth_id) {
-		this.auth_id = auth_id;
+		this.auth_Id = auth_id;
 	}
 
 	public String getUname() {

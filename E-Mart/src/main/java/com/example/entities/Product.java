@@ -12,92 +12,121 @@ import jakarta.persistence.Table;
 public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="Prod_Id")
-	private int prod_id;
+	//@Column(name="Prod_Id")
+	private int prod_Id;
 	
-	@Column (name="ProdShortDesc")
-	private String prodShortDesc;
+	//@Column (name="ProdShortDesc")
+	private String prodName;
 
-	@Column (name="prodLongDesc")
-	private String prodLongDesc;
+	//@Column (name="prodLongDesc")
+	private String prodDescription;
 	
-	@Column (name="MrpPrice")
+	//@Column (name="MrpPrice")
 	private double mrpPrice;
 	
-	@Column (name="CardHoldersPrice")
+	private String prodImage;
+	
+	//@Column (name="CardHoldersPrice")
 	private double cardholdersPrice;
 	
-	@Column (name="PointsToBeRedm")
-	private int pointsToBeRedm;
+	//@Column (name="PointsToBeRedm")
+	private int pointsToBeRedeem;
 
 	public Product() {
 		super();
 	}
 
-	public Product(String prodShortDesc, String prodLongDesc, double mrpPrice, double cardholdersPrice,
-			int pointsToBeRedm) {
-		super();
-		this.prodShortDesc = prodShortDesc;
-		this.prodLongDesc = prodLongDesc;
-		this.mrpPrice = mrpPrice;
-		this.cardholdersPrice = cardholdersPrice;
-		this.pointsToBeRedm = pointsToBeRedm;
+	
+	public int getProd_Id() {
+		return prod_Id;
 	}
 
-	public int getProd_id() {
-		return prod_id;
+	public void setProd_Id(int prod_Id) {
+		this.prod_Id = prod_Id;
 	}
 
-	public void setProd_id(int prod_id) {
-		this.prod_id = prod_id;
+
+	public String getProdName() {
+		return prodName;
 	}
 
-	public String getProdShortDesc() {
-		return prodShortDesc;
+
+	public void setProdName(String prodName) {
+		this.prodName = prodName;
 	}
 
-	public void setProdShortDesc(String prodShortDesc) {
-		this.prodShortDesc = prodShortDesc;
+
+	public String getProdDescription() {
+		return prodDescription;
 	}
 
-	public String getProdLongDesc() {
-		return prodLongDesc;
+
+	public void setProdDescription(String prodDescription) {
+		this.prodDescription = prodDescription;
 	}
 
-	public void setProdLongDesc(String prodLongDesc) {
-		this.prodLongDesc = prodLongDesc;
-	}
 
 	public double getMrpPrice() {
 		return mrpPrice;
 	}
 
+
 	public void setMrpPrice(double mrpPrice) {
 		this.mrpPrice = mrpPrice;
 	}
+
+
+	public String getProdImage() {
+		return prodImage;
+	}
+
+
+	public void setProdImage(String prodImage) {
+		this.prodImage = prodImage;
+	}
+
 
 	public double getCardholdersPrice() {
 		return cardholdersPrice;
 	}
 
+
 	public void setCardholdersPrice(double cardholdersPrice) {
 		this.cardholdersPrice = cardholdersPrice;
 	}
 
-	public int getPointsToBeRedm() {
-		return pointsToBeRedm;
+
+	public int getPointsToBeRedeem() {
+		return pointsToBeRedeem;
 	}
 
-	public void setPointsToBeRedm(int pointsToBeRedm) {
-		this.pointsToBeRedm = pointsToBeRedm;
+
+	public void setPointsToBeRedeem(int pointsToBeRedeem) {
+		this.pointsToBeRedeem = pointsToBeRedeem;
 	}
+
+
+	public Product(int prod_Id, String prodName, String prodDescription, double mrpPrice, String prodImage,
+			double cardholdersPrice, int pointsToBeRedeem) {
+		super();
+		this.prod_Id = prod_Id;
+		this.prodName = prodName;
+		this.prodDescription = prodDescription;
+		this.mrpPrice = mrpPrice;
+		this.prodImage = prodImage;
+		this.cardholdersPrice = cardholdersPrice;
+		this.pointsToBeRedeem = pointsToBeRedeem;
+	}
+
 
 	@Override
 	public String toString() {
-		return "Product [prod_id=" + prod_id + ", prodShortDesc=" + prodShortDesc
-				+ ", prodLongDesc=" + prodLongDesc + ", mrpPrice=" + mrpPrice + ", cardholdersPrice=" + cardholdersPrice
-				+ ", pointsToBeRedm=" + pointsToBeRedm + "]";
+		return "Product [prod_Id=" + prod_Id + ", prodName=" + prodName + ", prodDescription=" + prodDescription
+				+ ", mrpPrice=" + mrpPrice + ", prodImage=" + prodImage + ", cardholdersPrice=" + cardholdersPrice
+				+ ", pointsToBeRedeem=" + pointsToBeRedeem + "]";
 	}
+
+	
 	
 	
 }

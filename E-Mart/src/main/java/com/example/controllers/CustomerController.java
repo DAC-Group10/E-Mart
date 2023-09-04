@@ -2,6 +2,7 @@ package com.example.controllers;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import com.example.entities.Customer;
 import com.example.services.CustomerService;
 
 @RestController
+@CrossOrigin
 public class CustomerController {
 
 	@Autowired
@@ -25,5 +27,8 @@ public class CustomerController {
 	public void addCustuomer(@RequestBody Customer customer) {
 		c_service.save(customer);
 	}
+	
+	//deletebyidf
+	//putbyid
 	
 }

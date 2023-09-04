@@ -19,9 +19,15 @@ public class CategoryManagerImpl implements CategoryManager {
 	}
 
 	@Override
-	public Optional<Category> getcategory(int id) {
+	public Optional<Category> getCategory(int id) {
 		
 		return repository.findById(id);
+	}
+
+	@Override
+	public List<Category> getCategory(String subcatid) {
+		// TODO Auto-generated method stub
+		return repository.getCategory(subcatid);
 	}
 
 }
