@@ -22,5 +22,11 @@ public class CustomerServiceImpl implements CustomerService{
 		return c_repository.findById(cId);
 	}
 
+	@Override
+	public void updateCustomer(int custid, Customer c) {
+		c_repository.updateCustomer(custid, c.getAddLine1(), c.getAddLine2(), c.getCity(), c.getCustName(), c.getEmail(), c.getGender(), c.getPhoneNo(), c.getPincode(), c.getRedeemPoints());
+		
+	}
+
 
 }

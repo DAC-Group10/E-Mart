@@ -29,6 +29,8 @@ public class Invoice {
 	//@Column(name="PayableAmt")
     private double payableAmt;
     
+    private double deliveryCharge;
+    
 	private int cust_Id;
 
     public Invoice() {
@@ -42,7 +44,7 @@ public class Invoice {
 		this.invDate = invDate;
 		this.totalAmt = totalAmt;
 		this.tax = tax;
-//		this.deliveryCharge = deliveryCharge;
+		this.deliveryCharge = deliveryCharge;
 		this.payableAmt = payableAmt;
 		this.cust_Id = cust_Id;
 	}
@@ -98,12 +100,12 @@ public class Invoice {
 		this.cust_Id = cust_Id;
 	}
 
-//	public double getDeliveryCharge() {
-//		return deliveryCharge;
-//	}
-//
-//	public void setDeliveryCharge(double deliveryCharge) {
-//		this.deliveryCharge = deliveryCharge;
-//	}
+	public double getDeliveryCharge() {
+		return deliveryCharge;
+	}
+
+	public void setDeliveryCharge(double deliveryCharge) {
+		this.deliveryCharge = deliveryCharge;
+	}
 	
 }

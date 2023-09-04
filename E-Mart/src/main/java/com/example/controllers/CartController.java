@@ -46,4 +46,14 @@ public class CartController {
 	public void deleteCart(@PathVariable int cartid) {
 		cart_Service.deleteCartById(cartid);
 	}
+	
+	@DeleteMapping(value = "api/deleteCartByCustomer/{custid}")
+	public void deleteCartByCustomer(@PathVariable int custid) {
+		cart_Service.deleteByCustId(custid);
+	}
+	
+	@PutMapping(value = "api/updateQuantity/{qty}/{prodid}/{custid}")
+	public void updateQuantity(@PathVariable int qty , @PathVariable int prodid, @PathVariable int custid) {
+		cart_Service.updateQuantity(qty, prodid, custid);
+	}
 }

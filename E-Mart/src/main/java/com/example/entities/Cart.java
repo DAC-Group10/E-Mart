@@ -12,6 +12,8 @@ public class Cart {
 	
 	public int cust_Id;
 	
+	public int quantity;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "prod_Id",referencedColumnName = "prod_Id")
 	private Product product;
@@ -20,12 +22,15 @@ public class Cart {
 		super();
 	}
 
-	public Cart(int cart_Id, int cust_Id, Product product) {
+
+	public Cart(int cart_Id, int cust_Id, int quantity, Product product) {
 		super();
 		this.cart_Id = cart_Id;
 		this.cust_Id = cust_Id;
+		this.quantity = quantity;
 		this.product = product;
 	}
+
 
 	public int getCart_Id() {
 		return cart_Id;
@@ -51,4 +56,14 @@ public class Cart {
 		this.product = product;
 	}
 
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
 }

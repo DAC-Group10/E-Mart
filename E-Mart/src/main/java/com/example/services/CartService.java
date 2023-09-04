@@ -9,4 +9,6 @@ public interface CartService {
 	void addByProject(Cart cart, int cid);
 	List<Cart> getCartByCustomer(int custid);
 	void deleteCartById(int cartid);
+	void deleteByCustId(int custid);
+	void updateQuantity(int qty, int prodid, int custid);
 }
