@@ -1,0 +1,9 @@
+.cart{
+    padding: 20px;
+    text-align: center;
+}
+
+.empty{
+    text-align: center;
+    color: red;
+}
