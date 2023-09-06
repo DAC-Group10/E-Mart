@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=E-Mart/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.services{InvoiceDtlManager.java[InvoiceDtlManager" modifiers="513" timestamp="1693385170312"/>
+    <typeInfo handle="=E-Mart/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.services{InvoiceDtlManager.java[InvoiceDtlManager" modifiers="513" timestamp="1693853606354"/>
     <typeInfo handle="=E-Mart/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.services{ProductDtlManager.java[ProductDtlManager" modifiers="513" timestamp="1692537663370"/>
     <typeInfo handle="=E-Mart/C:\/Users\/Kate\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.1.2\/spring-data-jpa-3.1.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.1.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1692018182296"/>
     <typeInfo handle="=E-Mart/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.services{ConfigManager.java[ConfigManager" modifiers="513" timestamp="1692538353106"/>
