@@ -1,0 +1,20 @@
+.appgcontainer{
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 20px;
+}
+
+.logreg{
+  border: 1px solid;
+  height: 500px;
+}
+
+.logreg2{
+  border: 1px solid;
+  height: 500px;
+}
+
+.appbody{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
